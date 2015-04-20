@@ -44,6 +44,7 @@
   <ItemGroup>
     <None Include="Compose.ApplicationExtension.nuspec" />
     <None Include="ApplicationExtensions.cs.pp" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="README.txt" />
@@ -57,7 +58,7 @@
 COPY "$(ProjectDir)ApplicationExtensions.cs.pp" "$(SolutionDir)artifacts\packages\$(ProjectName)\content\"
 COPY "$(ProjectDir)README.txt" "$(SolutionDir)artifacts\packages\$(ProjectName)\"
 COPY "$(ProjectDir)$(ProjectName).nuspec" "$(SolutionDir)artifacts\packages\$(ProjectName)\"
-"$(SolutionDir)packages\NuGet.CommandLine.2.8.3\tools\NUGET" PACK "$(SolutionDir)artifacts\packages\$(ProjectName)\$(ProjectName).nuspec" -OutputDirectory "$(SolutionDir)artifacts\packages"</PostBuildEvent>
+"$(SolutionDir)packages\NuGet.CommandLine.2.8.5\tools\NUGET" PACK "$(SolutionDir)artifacts\packages\$(ProjectName)\$(ProjectName).nuspec" -OutputDirectory "$(SolutionDir)artifacts\packages"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
